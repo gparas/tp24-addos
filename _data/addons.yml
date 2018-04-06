@@ -1,0 +1,43 @@
+- title: Flight Alerts
+  badge: false
+  price: 4.65
+  services:
+  - Booking number
+  - Flight status updates (delays and cancellations)
+  - Pre-departure reminder
+
+- title: Flexible ticket
+  badge: Special Offer
+  price: 11.76
+  description: Enjoy the freedom to change your travel dates as you please.
+  services:
+  - Free rebooking
+  - Change travel plans with no additional fees
+
+- title: Service Package
+  badge: Smart Choice
+  price: 29.19
+  description: Choose the service package that best suits your needs
+  services:
+  - Handling charges
+  - Priority assistance
+  - Refund policy
+  - Flight compensation
+
+- title: Travel insurance
+  badge: Recommended
+  price: 17.46
+  description: Get travel insurance and enjoy your trip!
+  services:
+  - 24h medical assistance
+  - Repatriation expenses
+  - Medical and hospitalization expenses
+  - Personal accident compensation
+
+- title: Check-in service
+  badge: Only available here
+  price: 12.24
+  services:
+  - Avoid long check-in lines
+  - We will handle your check-in
+  - You will receive your boarding pass via email

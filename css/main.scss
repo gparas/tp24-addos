@@ -1,0 +1,135 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+$primary:         #EA7600;
+$secondary:       #00A499;
+$success:         #4CAF50;
+$info:            #00A3E0;
+$warning:         #F0AD4E;
+$danger:          #D9534F;
+$light:           rgba(#000, .03);
+$dark:            #444444;
+
+$font-family-sans-serif:  effra, sans-serif;
+
+$body-bg:         #f5f5f5;
+$body-color:      #444444;
+
+$text-muted:      #999999;
+
+$link-color:      $info;
+
+$font-size-base:  1rem;
+
+$h1-font-size:    $font-size-base * 2.5;
+$h2-font-size:    $font-size-base * 2;
+$h3-font-size:    $font-size-base * 1.5;
+$h4-font-size:    $font-size-base * 1.25;
+$h5-font-size:    $font-size-base * 1.125;
+$h6-font-size:    $font-size-base;
+
+$btn-border-radius:  100px;
+
+@import "bootstrap";
+
+// Reboot
+// 
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+svg{
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+// Layout
+// 
+
+.main,
+.sidebar{
+  @include make-col-ready;
+}
+
+.sidebar{
+  display: none;
+}
+
+@include media-breakpoint-up(lg){
+  .sidebar{
+    display: block;
+    @include make-col(3, 10)
+  }
+  .main{
+    @include make-col(7, 10)
+  }
+}
+
+
+// Button
+// 
+
+.btn-default {
+  @include button-variant(#fff, #ccc);
+}
+
+
+// Addons
+// 
+
+.addons-icon{
+  position: relative;
+  margin: 0 auto;
+
+  &:before{
+    position: absolute;
+    content: '';
+    width: 56px;
+    height: 56px;
+    background: rgba($primary, .13);
+    border-radius: 50%;
+    right: -11px;
+    top: 22px;
+  }
+
+  > svg{
+    position: relative;
+  }
+}
+
+
+.addons-header{
+  svg{
+    color: $text-muted;
+
+    [data-color="color-2"]{
+      color: $secondary;
+    }
+  }
+}
+
+
+// Borders
+//
+
+.border-dashed{
+  border-style: dashed !important;
+}
+
+.border-dotted{
+  border-style: dotted !important;
+}
+
+// Line height
+// 
+
+.leading-none   { line-height: 1; }
+.leading-small  { line-height: 1.2; }
+.leading-normal { line-height: 1.5; }
+.leading-large  { line-height: 2; }
